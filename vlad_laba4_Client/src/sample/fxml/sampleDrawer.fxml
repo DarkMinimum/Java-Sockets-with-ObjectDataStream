@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.utilities.Controller">
+   <children>
+      <ToolBar layoutY="-1.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="48.0" prefWidth="700.0">
+        <items>
+            <Pane prefHeight="31.0" prefWidth="481.0">
+               <children>
+                  <Spinner fx:id="spinner" editable="true" layoutX="14.0" layoutY="7.0" prefHeight="25.0" prefWidth="72.0" />
+                  <Button fx:id="er" layoutX="87.0" layoutY="7.0" mnemonicParsing="false" onAction="#eraserButton" text="Eraser" />
+                  <ColorPicker fx:id="color_picker" layoutX="135.0" layoutY="6.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="26.0" prefWidth="97.0" />
+                  <ColorPicker fx:id="color_picker1" layoutX="232.0" layoutY="6.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="26.0" prefWidth="97.0" />
+                  <Button layoutX="417.0" layoutY="7.0" mnemonicParsing="false" onAction="#generateCircles" text="Generate" />
+                  <ColorPicker fx:id="color_picker2" layoutX="329.0" layoutY="7.0" prefHeight="25.0" prefWidth="88.0" />
+               </children>
+            </Pane>
+            <Pane prefHeight="28.0" prefWidth="189.0">
+               <children>
+                  <Button alignment="CENTER" contentDisplay="TOP" defaultButton="true" layoutX="119.0" layoutY="7.0" mnemonicParsing="false" onAction="#sendToServer" prefHeight="25.0" prefWidth="57.0" text="Send" textOverrun="CLIP" />
+               </children></Pane>
+        </items>
+      </ToolBar>
+      <Canvas fx:id="canvas_field" height="353.0" layoutX="7.0" layoutY="47.0" width="686.0" />
+      <Label fx:id="label_current_tool" layoutX="7.0" layoutY="377.0" />
+   </children>
+</AnchorPane>
